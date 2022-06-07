@@ -1,0 +1,8 @@
+<zimlet name="com_zimbra_tlp" version="0.0.1" label="${msg.TLPZimlet_label}" description="${msg.TLPZimlet_descr}">
+   <summary>First.org Traffic Light Protocol (TLP) sending options.</summary>
+   <include>com_zimbra_tlp.js</include>
+   <handlerObject>com_zimbra_tlp_HandlerObject</handlerObject>
+   <includeCSS>com_zimbra_tlp.css</includeCSS>
+   <zimletPanelItem label="${msg.TLPZimlet_label}" icon="com_zimbra_tlp-panelIcon">
+   </zimletPanelItem>
+</zimlet>
