@@ -27,6 +27,7 @@ var TLPZimlet = com_zimbra_tlp_HandlerObject;
   * @param	{ZmController}		controller		the application controller
   * @param	{string}			   viewId			the view Id
  * */
+
 TLPZimlet.prototype.initializeToolbar =
 function(app, toolbar, controller, viewId) {
    var zimletInstance = appCtxt._zimletMgr.getZimletByName('com_zimbra_tlp').handlerObject;
@@ -75,8 +76,8 @@ function(controller) {
 
    var composeView = appCtxt.getCurrentView();
    var mode = composeView.getHtmlEditor().getMode();   
-   let content = composeView.getHtmlEditor().getContent();
-   let contentRegex = /<div><span style=".*">\[TLP:.*\] .*<\/span><\/div>/m
+   var content = composeView.getHtmlEditor().getContent();
+   var contentRegex = /<div><span style=".*">\[TLP:.*\] .*<\/span><\/div>/m
    content = content.replace(contentRegex, "");
    contentRegex = /\[TLP:.*\] .*\n/m
    content = content.replace(contentRegex, "");
@@ -118,8 +119,8 @@ function(controller) {
       }
    }
 
-   const subjectRegex = /\[TLP:RED\]\s|\[TLP:AMBER\]\s|\[TLP:GREEN\]\s/gm
-   let subject = appCtxt.getCurrentView()._subjectField.value;
+   var subjectRegex = /\[TLP:RED\]\s|\[TLP:AMBER\]\s|\[TLP:GREEN\]\s/gm
+   var subject = appCtxt.getCurrentView()._subjectField.value;
    subject = subject.replaceAll(subjectRegex, "");
 
    switch (document.getElementById('TLPZimletsensitivity').value)
@@ -144,6 +145,7 @@ function(controller) {
    }
    catch (err) {}
 };
+
 
 /** This method is called when the dialog "CANCEL" button is clicked.
  * It pops-down the current dialog.
